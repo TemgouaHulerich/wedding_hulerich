@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Site Web de Mariage - Marie & Jean
 
 Ce projet est un site web minimaliste, moderne et responsive pour un mariage, développé avec Next.js et Tailwind CSS. Il inclut une gestion des RSVPs via Google Sheets et une liste de cadeaux avec intégration PayPal.
@@ -43,7 +42,3 @@ Clonez le dépôt et installez les dépendances :
 git clone https://github.com/votre-utilisateur/wedding-website.git
 cd wedding-website
 npm install
-=======
-# wedding_hulerich
-Site pour le mariage de Lyne et Hulerich
->>>>>>> 1e38bf7a9faa7cf0f967dec72468df060a6e2ce9
