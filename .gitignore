@@ -20,4 +20,4 @@
 *.pem
 
 # Environment Variables
-.env*.local
+.env*.localservice-account.json
