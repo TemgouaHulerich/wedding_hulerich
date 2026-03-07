@@ -2,6 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { client } from '@/utils/paypal';
 import paypal from '@paypal/checkout-server-sdk';
 
+export const runtime = 'edge';
+export const config = { runtime: 'edge' };
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

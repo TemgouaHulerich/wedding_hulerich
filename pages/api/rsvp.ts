@@ -2,6 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { rsvpSchema } from '@/utils/validation';
 import { writeToSheet } from '@/utils/sheets';
 
+export const runtime = 'edge';
+export const config = { runtime: 'edge' };
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
