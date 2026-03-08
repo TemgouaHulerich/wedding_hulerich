@@ -3,6 +3,9 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+  html, body {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-neutral-white text-neutral-black;
   }

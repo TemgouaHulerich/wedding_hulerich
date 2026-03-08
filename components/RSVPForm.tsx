@@ -66,7 +66,7 @@ const RSVPForm = () => {
 
         <div className="mb-6">
           <p className="block text-neutral-black/80 mb-2">Serez-vous des nôtres ? *</p>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <label className="flex items-center">
               <input type="radio" value="Oui" {...register('presence')} className="mr-2" />
               Oui, avec plaisir !
