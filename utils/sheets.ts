@@ -11,7 +11,9 @@ function encodeBase64Url(input: string | Uint8Array): string {
     base64 = Buffer.from(bytes).toString('base64');
   } else {
     let binary = '';
-    for (const b of bytes) binary += String.fromCharCode(b);
+    for (let i = 0; i < bytes.length; i += 1) {
+      binary += String.fromCharCode(bytes[i]);
+    }
     base64 = btoa(binary);
   }
 
