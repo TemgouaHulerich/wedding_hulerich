@@ -60,7 +60,14 @@ const GallerySection = () => {
                 setOpen(true);
               }}
             >
-              <Image src={image.src} alt={image.alt} layout="fill" objectFit="cover" loading="lazy" className="transform hover:scale-105 transition-transform duration-300" />
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                style={{ objectFit: 'cover' }}
+                loading="lazy"
+                className="transform hover:scale-105 transition-transform duration-300"
+              />
             </motion.div>
           ))}
         </div>

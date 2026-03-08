@@ -45,7 +45,7 @@ const GiftSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="flex flex-col items-center p-8 border border-white/80 rounded-2xl shadow-[0_20px_60px_-35px_rgba(0,0,0,0.4)] bg-white/95 backdrop-blur-sm hover:-translate-y-1 transition-transform duration-300">
             <div className="relative h-12 w-32 mb-4">
-              <Image src="/images/paypal.png" alt="Logo PayPal" layout="fill" objectFit="contain" />
+              <Image src="/images/paypal.png" alt="Logo PayPal" fill style={{ objectFit: 'contain' }} />
             </div>
             <h3 className="text-2xl font-serif text-neutral-black mb-4">Via PayPal</h3>
             <p className="text-neutral-black/80 mb-6 flex-grow">Paiement direct en ligne via PayPal.</p>
@@ -70,7 +70,7 @@ const GiftSection = () => {
 
           <div className="flex flex-col items-center p-8 border border-white/80 rounded-2xl shadow-[0_20px_60px_-35px_rgba(0,0,0,0.4)] bg-white/95 backdrop-blur-sm hover:-translate-y-1 transition-transform duration-300">
             <div className="relative h-12 w-24 mb-4">
-              <Image src="/images/wero.png" alt="Logo Wero" layout="fill" objectFit="contain" />
+              <Image src="/images/wero.png" alt="Logo Wero" fill style={{ objectFit: 'contain' }} />
             </div>
             <h3 className="text-2xl font-serif text-neutral-black mb-4">Via Wero</h3>
             <p className="text-neutral-black/80 mb-6 flex-grow">Pour un virement instantane, utilisez notre numero Wero.</p>
