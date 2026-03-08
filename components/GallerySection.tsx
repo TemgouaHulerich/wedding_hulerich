@@ -27,9 +27,18 @@ const GallerySection = () => {
 
   return (
     <section id="gallery" className="py-20 bg-neutral-beige">
-      <div className="container mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.p
+          className="text-center text-xs tracking-[0.2em] uppercase text-accent-gray mb-3"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+        >
+          Moments
+        </motion.p>
         <motion.h2
-          className="text-4xl font-serif text-center text-neutral-black mb-12"
+          className="text-4xl md:text-5xl font-serif text-center text-neutral-black mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -41,7 +50,7 @@ const GallerySection = () => {
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
-              className="relative aspect-square rounded-lg overflow-hidden shadow-lg cursor-pointer"
+              className="relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.2 }}

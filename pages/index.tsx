@@ -24,13 +24,18 @@ export default function Home() {
 
       <main>
         <HeroSection />
-        <div id="rsvp" className="py-20 bg-neutral-beige">
-          <h2 className="text-4xl font-serif text-center text-neutral-black mb-12">RSVP</h2>
+        <StorySection />
+        <InfoSection />
+        <div id="rsvp" className="py-20 bg-gradient-to-b from-neutral-beige to-white">
+          <div className="max-w-5xl mx-auto px-6 text-center mb-10">
+            <p className="inline-block text-xs tracking-[0.2em] uppercase px-3 py-1 rounded-full border border-accent-gray/30 text-accent-gray mb-4">
+              Confirmation
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-black">RSVP</h2>
+          </div>
           <RSVPForm />
         </div>
         <GiftSection />
-        <InfoSection />
-        <StorySection />
         <GallerySection />
       </main>
 

@@ -5,14 +5,25 @@
 @layer base {
   html, body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-neutral-white text-neutral-black;
+    @apply text-neutral-black;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 35%),
+      radial-gradient(circle at 90% 0%, rgba(245, 245, 220, 0.7) 0%, rgba(245, 245, 220, 0) 30%),
+      #ffffff;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
   p {
     @apply font-sans;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply max-w-6xl mx-auto px-6;
   }
 }
