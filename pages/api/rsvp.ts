@@ -26,7 +26,8 @@ export default async function handler(req: Request): Promise<Response> {
       payload.name,
       payload.email,
       payload.presence,
-      payload.guests || 0,
+      payload.hotelNeeded || '',
+      payload.songRequest || '',
       payload.diet || '',
       payload.message || '',
     ];
