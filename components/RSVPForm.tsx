@@ -27,13 +27,22 @@ const RSVPForm = () => {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      const rawBody = await response.text();
+      let result: { status?: string; message?: string } = {};
+      try {
+        result = rawBody ? JSON.parse(rawBody) : {};
+      } catch {
+        result = {};
+      }
 
       if (response.ok && result.status === 'success') {
         setFormStatus({ message: 'Merci ! Votre reponse a bien ete enregistree.', type: 'success' });
         reset();
       } else {
-        throw new Error(result.message || 'Une erreur est survenue.');
+        const fallback = response.status >= 500
+          ? 'Erreur serveur temporaire. Reessayez dans quelques instants.'
+          : 'Une erreur est survenue.';
+        throw new Error(result.message || fallback);
       }
     } catch (error: any) {
       setFormStatus({ message: error.message, type: 'error' });
