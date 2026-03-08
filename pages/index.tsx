@@ -13,11 +13,11 @@ export default function Home() {
     <div className="bg-neutral-white">
       <Head>
         <title>Lyne & Hulerich | Notre Mariage</title>
-        <meta name="description" content="Rejoignez-nous pour célébrer notre mariage le 20 Juin 2026." />
+        <meta
+          name="description"
+          content="Rejoignez-nous pour celebrer notre mariage le 20 Juin 2026."
+        />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Helvetica+Neue&display=swap" rel="stylesheet" />
       </Head>
 
       <Header />
