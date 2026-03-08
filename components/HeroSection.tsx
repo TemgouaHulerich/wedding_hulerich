@@ -7,9 +7,8 @@ const HeroSection = () => {
       <Image
         src="/images/principale.jpg"
         alt="Lyne et Hulerich"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center 25%"
+        fill
+        style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
         className="z-0"
         priority
       />

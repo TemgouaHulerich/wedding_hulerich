@@ -1,41 +1,42 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { rsvpSchema } from '@/utils/validation';
 import { writeToSheet } from '@/utils/sheets';
 
 export const runtime = 'edge';
 export const config = { runtime: 'edge' };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: Request): Promise<Response> {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method Not Allowed' });
+    return Response.json({ status: 'error', message: 'Method Not Allowed' }, { status: 405 });
   }
 
   try {
-    // Validation Backend
-    const validatedData = rsvpSchema.parse(req.body);
-    
-    // Ordre des données pour Google Sheets
+    const body = await req.json();
+    const validatedData = rsvpSchema.safeParse(body);
+
+    if (!validatedData.success) {
+      return Response.json(
+        { status: 'error', message: 'Donnees invalides.', errors: validatedData.error.flatten() },
+        { status: 400 }
+      );
+    }
+
+    const payload = validatedData.data;
     const sheetData = [
       new Date().toISOString(),
-      validatedData.name,
-      validatedData.email,
-      validatedData.presence,
-      validatedData.guests || 0,
-      validatedData.diet || '',
-      validatedData.message || '',
+      payload.name,
+      payload.email,
+      payload.presence,
+      payload.hotelNeeded || '',
+      payload.songRequest || '',
+      payload.diet || '',
+      payload.message || '',
     ];
 
     await writeToSheet(sheetData);
 
-    res.status(200).json({ status: 'success', message: 'RSVP enregistré avec succès.' });
+    return Response.json({ status: 'success', message: 'RSVP enregistre avec succes.' }, { status: 200 });
   } catch (error: any) {
-    if (error.errors) { // Erreur de validation Zod
-      return res.status(400).json({ status: 'error', message: 'Données invalides.', errors: error.flatten() });
-    }
     console.error('API RSVP Error:', error);
-    res.status(500).json({ status: 'error', message: 'Erreur interne du serveur.' });
+    return Response.json({ status: 'error', message: 'Erreur interne du serveur.' }, { status: 500 });
   }
 }

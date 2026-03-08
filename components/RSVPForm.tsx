@@ -27,13 +27,22 @@ const RSVPForm = () => {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      const rawBody = await response.text();
+      let result: { status?: string; message?: string } = {};
+      try {
+        result = rawBody ? JSON.parse(rawBody) : {};
+      } catch {
+        result = {};
+      }
 
       if (response.ok && result.status === 'success') {
         setFormStatus({ message: 'Merci ! Votre reponse a bien ete enregistree.', type: 'success' });
         reset();
       } else {
-        throw new Error(result.message || 'Une erreur est survenue.');
+        const fallback = response.status >= 500
+          ? 'Erreur serveur temporaire. Reessayez dans quelques instants.'
+          : 'Une erreur est survenue.';
+        throw new Error(result.message || fallback);
       }
     } catch (error: any) {
       setFormStatus({ message: error.message, type: 'error' });
@@ -87,14 +96,29 @@ const RSVPForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="guests" className="block text-neutral-black/80 mb-2">Nombre d accompagnants (vous inclus)</label>
+            <p className="block text-neutral-black/80 mb-2">Avez vous besoin d'un hotel ?</p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+              <label className="flex items-center">
+                <input type="radio" value="Oui" {...register('hotelNeeded')} className="mr-2" />
+                Oui
+              </label>
+              <label className="flex items-center">
+                <input type="radio" value="Non" {...register('hotelNeeded')} className="mr-2" />
+                Non
+              </label>
+            </div>
+            {errors.hotelNeeded && <p className="text-red-500 text-sm mt-1">{errors.hotelNeeded.message}</p>}
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="songRequest" className="block text-neutral-black/80 mb-2">Une chanson a suggerer pour la soiree ?</label>
             <input
-              id="guests"
-              type="number"
-              min="1"
-              {...register('guests', { valueAsNumber: true })}
+              id="songRequest"
+              type="text"
+              {...register('songRequest')}
               className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-accent-gray/30 focus:border-accent-gray transition-all"
             />
+            {errors.songRequest && <p className="text-red-500 text-sm mt-1">{errors.songRequest.message}</p>}
           </div>
 
           <div className="mb-6">
