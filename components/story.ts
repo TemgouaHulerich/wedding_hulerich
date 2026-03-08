@@ -41,7 +41,6 @@ export const storyEvents: StoryEvent[] = [
         description: "Nous aimions particulièrement les plages espagnoles. Ces moments d'évasion, entre le soleil et la mer, sont devenus notre petit rituel pour nous retrouver et rêver ensemble.",
         imageUrls: [
             '/images/LH_Plage.jpg',
-            '/images/LH_Plage2.jpg',
         ],
     },
     {
