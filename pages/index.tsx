@@ -24,14 +24,14 @@ export default function Home() {
 
       <main>
         <HeroSection />
-        <StorySection />
-        <InfoSection />
-        <GallerySection />
         <div id="rsvp" className="py-20 bg-neutral-beige">
           <h2 className="text-4xl font-serif text-center text-neutral-black mb-12">RSVP</h2>
           <RSVPForm />
         </div>
         <GiftSection />
+        <InfoSection />
+        <StorySection />
+        <GallerySection />
       </main>
 
       <Footer />
