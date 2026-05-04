@@ -21,3 +21,4 @@
 
 # Environment Variables
 .env*.local
+service-account.json
