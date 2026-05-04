@@ -80,7 +80,7 @@ const RSVPForm = () => {
         </div>
 
         <div className="mb-6">
-          <label htmlFor="guests" className="block text-neutral-black/80 mb-2">Nombre d'accompagnants (vous inclus)</label>
+          <label htmlFor="guests" className="block text-neutral-black/80 mb-2">Nombre d&apos;accompagnants (vous inclus)</label>
           <input
             id="guests"
             type="number"

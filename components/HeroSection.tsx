@@ -23,7 +23,7 @@ const HeroSection = () => {
           className="bg-neutral-white text-neutral-black font-bold py-3 px-8 rounded-full hover:bg-neutral-beige transition-colors"
           aria-label="Répondre à l'invitation"
         >
-          RÉPONDRE À L'INVITATION
+          RÉPONDRE À L&apos;INVITATION
         </a>
       </div>
     </section>
