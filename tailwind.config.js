@@ -13,8 +13,8 @@ module.exports = {
         'accent-gray': '#808080',
       },
       fontFamily: {
-        sans: ['"Helvetica Neue"', 'sans-serif'],
-        serif: ['"Playfair Display"', 'serif'],
+        sans: ['system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        serif: ['var(--font-serif)', 'serif'],
       },
     },
   },

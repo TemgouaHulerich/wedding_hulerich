@@ -7,16 +7,15 @@ const HeroSection = () => {
       <Image
         src="/images/principale.jpg"
         alt="Lyne et Hulerich"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center 25%" // Vous pouvez ajuster ce pourcentage (de 0% à 100%) pour déplacer l'image verticalement.
+        fill
+        style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
         className="z-0"
         priority
       />
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="z-10 p-6">
         <h1 className="text-6xl md:text-8xl font-serif mb-4">Lyne & Hulerich</h1>
-        <p className="text-xl md:text-2xl font-sans mb-2">CÉLÈBRENT LEUR AMOUR</p>
+        <p className="text-xl md:text-2xl font-sans mb-2">CELEBRENT LEUR AMOUR</p>
         <p className="text-2xl md:text-4xl font-serif mb-8">20 JUIN 2026</p>
         <a
           href="#rsvp"

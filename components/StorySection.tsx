@@ -52,9 +52,8 @@ const StorySection = () => {
                     <Image
                       src={event.imageUrls[0]}
                       alt={event.title}
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition={event.objectPosition || 'center'}
+                      fill
+                      style={{ objectFit: 'cover', objectPosition: event.objectPosition || 'center' }}
                       loading="lazy"
                       className={`transform transition-all duration-300 group-hover:scale-105 ${event.grayscale ? 'filter grayscale group-hover:filter-none' : ''}`}
                     />
@@ -70,7 +69,14 @@ const StorySection = () => {
                           slides: event.imageUrls.map(src => ({ src }))
                         })}
                       >
-                        <Image src={url} alt={`${event.title} ${imgIndex + 1}`} layout="fill" objectFit="cover" loading="lazy" className={`transform transition-all duration-300 group-hover:scale-105 ${event.grayscale ? 'filter grayscale group-hover:filter-none' : ''}`} />
+                        <Image
+                          src={url}
+                          alt={`${event.title} ${imgIndex + 1}`}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          loading="lazy"
+                          className={`transform transition-all duration-300 group-hover:scale-105 ${event.grayscale ? 'filter grayscale group-hover:filter-none' : ''}`}
+                        />
                       </div>
                     ))}
                   </div>

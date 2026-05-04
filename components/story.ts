@@ -13,7 +13,7 @@ export const storyEvents: StoryEvent[] = [
         date: 'Juillet 2022',
         title: 'Pampelune, une rencontre',
         description: "Parfois, le destin a besoin d'un petit coup de pouce. Après des semaines d'échanges, nous nous sommes enfin rencontrés au cœur des fêtes de San Fermin. Ce qui n'était qu'une simple mise en contact s'est transformé en une véritable étincelle.",
-        imageUrls: ['/images/LH_PremierJour.jpg', '/images/Fermin%20(2).jpg'],
+        imageUrls: ['/images/LH_PremierJour.jpg', '/images/Fermin-2.jpg'],
     },
     {
         date: 'Automne 2022',
@@ -41,7 +41,6 @@ export const storyEvents: StoryEvent[] = [
         description: "Nous aimions particulièrement les plages espagnoles. Ces moments d'évasion, entre le soleil et la mer, sont devenus notre petit rituel pour nous retrouver et rêver ensemble.",
         imageUrls: [
             '/images/LH_Plage.jpg',
-            '/images/LH_Plage2.jpg',
         ],
     },
     {
@@ -68,7 +67,7 @@ export const storyEvents: StoryEvent[] = [
         date: 'Nos différences, notre force',
         title: 'Deux mondes, un amour',
         description: 'Elle, camerounaise ayant grandi en Espagne ; moi, camerounais du Cameroun. Nos parcours, nos valeurs, parfois si différents, sont devenus le ciment de notre relation et notre plus grande force.',
-        imageUrls: ['/images/Fermin%20(3).jpg'],
+        imageUrls: ['/images/Fermin-3.jpg'],
     },
     {
         date: '20 Juin 2026',
