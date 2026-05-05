@@ -14,9 +14,9 @@ const InfoSection = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-accent-gray" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 La Cérémonie
               </h3>
-              <p className="text-neutral-black/80"><strong>Cathédrale Notre Dame de L'Assomption</strong></p>
+              <p className="text-neutral-black/80"><strong>Cathédrale Notre Dame de L&apos;Assomption</strong></p>
               <p className="text-neutral-black/80">16 Rue Carnot, 93240 Stains</p>
-              <p className="text-neutral-black/80 mt-2"><strong>Heure :</strong> 11h00</p>
+              <p className="text-neutral-black/80 mt-2"><strong>Heure :</strong> 10h00</p>
             </div>
             <div>
               <h3 className="flex items-center text-2xl font-serif text-neutral-black mb-3">
@@ -24,18 +24,18 @@ const InfoSection = () => {
                 La Réception
               </h3>
               <p className="text-neutral-black/80"><strong>La Villa Angelie</strong></p>
-              <a href="https://www.google.com/maps/search/?api=1&query=La+Villa+Angelie+Zone+Industrielle+des+Les+Bas+Prés+60160+Montataire" target="_blank" rel="noopener noreferrer" className="text-neutral-black/80 hover:text-accent-gray transition-colors">
+              <a href="https://www.google.com/maps/search/?api=1&query=Zone%20Industrielle%20des%2C%20Les%20Bas%20Pr%C3%A9s%2C%2060160%20Montataire" target="_blank" rel="noopener noreferrer" className="text-neutral-black/80 hover:text-accent-gray transition-colors">
                 Zone Industrielle des, Les Bas Prés, 60160 Montataire
               </a>
               <p className="text-neutral-black/80 mt-2"><strong>Horaires :</strong></p>
-              <p className="text-neutral-black/80">Vin d'honneur à partir de 14h, suivi de la soirée.</p>
+              <p className="text-neutral-black/80">Vin d&apos;honneur à partir de 14h, suivi de la soirée.</p>
             </div>
             <div>
               <h3 className="flex items-center text-2xl font-serif text-neutral-black mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-accent-gray" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Code Vestimentaire
               </h3>
-              <p className="text-neutral-black/80 mb-6">Pour célébrer avec nous, nous vous invitons à adopter une palette de couleurs douces et romantiques. Voici quelques suggestions pour vous inspirer. L'élégance et le confort sont de mise pour fêter jusqu'au bout de la nuit !</p>
+              <p className="text-neutral-black/80 mb-6">Pour célébrer avec nous, nous vous invitons à adopter une palette de couleurs douces et romantiques. Voici quelques suggestions pour vous inspirer. L&apos;élégance et le confort sont de mise pour fêter jusqu&apos;au bout de la nuit !</p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-full bg-rose-200 shadow-md mx-auto border-2 border-white"></div>
@@ -57,13 +57,13 @@ const InfoSection = () => {
           <div>
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.450348434777!2d2.381397076935541!3d48.95980099238908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e669527580a87d%3A0x46152a58a46f2053!2s%C3%89glise%20Notre-Dame-de-l'Assomption!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr"
+                src="https://www.google.com/maps?q=Zone%20Industrielle%20des%2C%20Les%20Bas%20Pr%C3%A9s%2C%2060160%20Montataire&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Carte du lieu de la cérémonie"
+                title="Carte du lieu de la réception"
               ></iframe>
             </div>
           </div>

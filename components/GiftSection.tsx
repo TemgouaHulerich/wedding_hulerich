@@ -115,11 +115,11 @@ const GiftSection = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-12 p-6 bg-white border border-gray-100 rounded-2xl shadow-[0_16px_40px_-30px_rgba(0,0,0,0.45)]">
-          <h3 className="text-xl font-serif text-neutral-black mb-2">N oubliez pas le petit mot</h3>
-          <p className="text-neutral-black/80">
-            Pour que nous puissions vous remercier personnellement, merci d ajouter votre nom dans le commentaire de votre virement.
-          </p>
+        <div className="max-w-4xl mx-auto mt-12 p-6 bg-neutral-beige rounded-lg">
+           <h3 className="text-xl font-serif text-neutral-black mb-2">N&apos;oubliez pas le petit mot !</h3>
+           <p className="text-neutral-black/80">
+             Pour que nous puissions vous remercier personnellement, merci d&apos;ajouter votre nom dans le commentaire de votre virement. Merci infiniment !
+           </p>
         </div>
       </div>
     </section>

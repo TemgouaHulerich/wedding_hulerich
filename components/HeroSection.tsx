@@ -17,22 +17,13 @@ const HeroSection = () => {
         <h1 className="text-6xl md:text-8xl font-serif mb-4">Lyne & Hulerich</h1>
         <p className="text-xl md:text-2xl font-sans mb-2">CELEBRENT LEUR AMOUR</p>
         <p className="text-2xl md:text-4xl font-serif mb-8">20 JUIN 2026</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#rsvp"
-            className="bg-neutral-white text-neutral-black font-bold py-3 px-8 rounded-full hover:bg-neutral-beige transition-colors"
-            aria-label="Repondre a l invitation"
-          >
-            REPONDRE A L INVITATION
-          </a>
-          <a
-            href="#gift"
-            className="bg-transparent border border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white/20 transition-colors"
-            aria-label="Acceder a la liste de cadeaux"
-          >
-            OFFRIR UN CADEAU
-          </a>
-        </div>
+        <a
+          href="#rsvp"
+          className="bg-neutral-white text-neutral-black font-bold py-3 px-8 rounded-full hover:bg-neutral-beige transition-colors"
+          aria-label="Répondre à l'invitation"
+        >
+          RÉPONDRE À L&apos;INVITATION
+        </a>
       </div>
     </section>
   );
