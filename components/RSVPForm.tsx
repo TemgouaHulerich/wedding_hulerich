@@ -140,19 +140,6 @@ const RSVPForm = () => {
               className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-accent-gray/30 focus:border-accent-gray transition-all"
             />
           </div>
-          {errors.presence && <p className="text-red-500 text-sm mt-1">{errors.presence.message}</p>}
-        </div>
-
-        <div className="mb-6">
-          <label htmlFor="guests" className="block text-neutral-black/80 mb-2">Nombre d&apos;accompagnants (vous inclus)</label>
-          <input
-            id="guests"
-            type="number"
-            min="1"
-            {...register('guests', { valueAsNumber: true })}
-            className="w-full p-3 border border-gray-300 rounded-md focus:ring-accent-gray focus:border-accent-gray"
-          />
-        </div>
 
           <button
             type="submit"
