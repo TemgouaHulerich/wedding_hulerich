@@ -8,19 +8,6 @@ const GiftSection = () => {
   const weroNumber = '+33754579041';
   const iban = 'FR76 3000 4000 0500 0012 3456 789';
 
-  const paypalDonationUrl = useMemo(() => {
-    if (process.env.NEXT_PUBLIC_PAYPAL_DONATION_URL) {
-      return process.env.NEXT_PUBLIC_PAYPAL_DONATION_URL;
-    }
-    const params = new URLSearchParams({
-      cmd: '_xclick',
-      business: paypalEmail,
-      item_name: 'Contribution mariage Lyne et Hulerich',
-      currency_code: 'EUR',
-    });
-    return `https://www.paypal.com/cgi-bin/webscr?${params.toString()}`;
-  }, []);
-
   const bankTransferUrl = process.env.NEXT_PUBLIC_BANK_TRANSFER_URL;
 
   const handleCopy = (text: string, type: string) => {
@@ -48,23 +35,17 @@ const GiftSection = () => {
               <Image src="/images/paypal.png" alt="Logo PayPal" fill style={{ objectFit: 'contain' }} />
             </div>
             <h3 className="text-2xl font-serif text-neutral-black mb-4">Via PayPal</h3>
-            <p className="text-neutral-black/80 mb-6 flex-grow">Paiement direct en ligne via PayPal.</p>
+            <p className="text-neutral-black/80 mb-6 flex-grow">
+              Pour nous envoyer une contribution, copiez notre adresse e-mail PayPal. Pensez à utiliser l&apos;option &quot;Entre proches&quot; pour éviter les frais.
+            </p>
             <div className="bg-neutral-beige p-4 rounded-xl mb-4 w-full flex items-center justify-center">
               <p className="font-sans text-lg font-semibold text-neutral-black/90 break-words select-all">{paypalEmail}</p>
             </div>
-            <a
-              href={paypalDonationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-neutral-black text-white font-bold py-3 px-8 rounded-full hover:bg-accent-gray transition-colors w-full mb-3 shadow-lg shadow-black/20"
-            >
-              Payer avec PayPal
-            </a>
             <button
               onClick={() => handleCopy(paypalEmail, 'paypal')}
-              className="border border-neutral-black text-neutral-black font-bold py-3 px-8 rounded-full hover:bg-neutral-beige transition-colors w-full"
+              className="bg-neutral-black text-white font-bold py-3 px-8 rounded-full hover:bg-accent-gray transition-colors w-full mt-auto shadow-lg shadow-black/20"
             >
-              {copied === 'paypal' ? 'Email copie !' : 'Copier l email'}
+              {copied === 'paypal' ? 'Email copié !' : "Copier l'email"}
             </button>
           </div>
 

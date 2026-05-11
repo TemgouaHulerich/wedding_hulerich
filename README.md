@@ -1,6 +1,6 @@
-# Site Web de Mariage - Marie & Jean
+# Site Web de Mariage - Lyne & Hulerich
 
-Ce projet est un site web minimaliste, moderne et responsive pour un mariage, développé avec Next.js et Tailwind CSS. Il inclut une gestion des RSVPs via Google Sheets et une liste de cadeaux avec intégration PayPal.
+Ce projet est un site web minimaliste, moderne et responsive pour un mariage, développé avec Next.js et Tailwind CSS. Il inclut une gestion des RSVPs via Google Sheets.
 
 ## Architecture du Projet
 
@@ -11,7 +11,6 @@ Le projet suit une structure standard pour une application Next.js avec `pages/`
     -   `_app.tsx`: Le composant principal de l'application, utilisé pour la configuration globale (ex: PayPal Provider).
     -   `api/`: Contient les endpoints serverless.
         -   `rsvp.ts`: Gère la soumission des formulaires RSVP.
-        -   `paypal.ts`: Gère la création des commandes PayPal.
 -   `components/`: Contient les composants React réutilisables qui constituent les différentes sections du site.
 -   `styles/`: Fichiers de style globaux et configuration Tailwind.
 -   `public/`: Contient les ressources statiques comme les images.
@@ -23,7 +22,6 @@ Le projet suit une structure standard pour une application Next.js avec `pages/`
 -   **Styling**: Tailwind CSS
 -   **Formulaires**: React Hook Form pour la gestion et la validation.
 -   **Validation de Schéma**: Zod pour la validation des données frontend et backend.
--   **Paiements**: PayPal REST SDK
 -   **Stockage de données (RSVP)**: Google Sheets API
 -   **Hébergement**: Prêt pour Vercel ou Netlify.
 
