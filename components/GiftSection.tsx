@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 const GiftSection = () => {
@@ -6,7 +6,7 @@ const GiftSection = () => {
 
   const paypalEmail = 'hulerichtemgoua@gmail.com';
   const weroNumber = '+33754579041';
-  const iban = 'FR76 3000 4000 0500 0012 3456 789';
+  const iban = 'FR76 3000 3022 0000 5025 6689 66';
 
   const bankTransferUrl = process.env.NEXT_PUBLIC_BANK_TRANSFER_URL;
 
