@@ -9,6 +9,9 @@ const partyDirectionsUrl =
 const partyTransitUrl =
   'https://www.google.com/maps/dir/?api=1&origin=%C3%89glise%20Notre-Dame-de-l%27Assomption%2C%2016%20Rue%20Carnot%2C%2093240%20Stains&destination=Les%20Bas%20Pr%C3%A9s%2C%2060160%20Montataire&travelmode=transit';
 
+const wineReceptionDirectionsUrl =
+  'https://www.google.com/maps/dir/?api=1&origin=%C3%89glise%20Notre-Dame-de-l%27Assomption%2C%2016%20Rue%20Carnot%2C%2093240%20Stains&destination=21%20Rue%20Nungesser%20et%20Coli%2C%2093380%20Saint-Denis&travelmode=driving';
+
 const hotelsNearChurch = [
   {
     name: 'B&B Hôtel Saint-Denis Porte de Paris',
@@ -98,8 +101,11 @@ const InfoSection = () => {
                 Vin d&apos;honneur
               </h3>
               <p className="text-neutral-black/80">
-                Après la cérémonie et quelques photos, le vin d&apos;honneur aura lieu dans la salle de fête de l&apos;église, juste à côté.
+                Après la cérémonie et quelques photos, le vin d&apos;honneur aura lieu dans la salle mise à disposition par le prêtre.
               </p>
+              <a href={wineReceptionDirectionsUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-neutral-black/80 hover:text-accent-gray transition-colors mt-2">
+                21 Rue Nungesser et Coli, 93380 Saint-Denis
+              </a>
             </div>
 
             <div>
